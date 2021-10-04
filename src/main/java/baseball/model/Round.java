@@ -31,4 +31,12 @@ public class Round {
 		}
 		roundResult = new RoundResult(strikeCnt, ballCnt);
 	}
+
+	public boolean isEnd() {
+		if(roundResult.getStrikeCnt() == 3) {
+			return true;
+		}
+		return false;
+	}
+	
 }

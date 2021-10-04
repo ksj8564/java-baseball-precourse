@@ -1,5 +1,7 @@
 package baseball.view;
 
+import baseball.util.Util;
+
 public class OutputView {
 
 	public static void answerNumInstruction() {
@@ -18,9 +20,31 @@ public class OutputView {
 		System.out.println("게임을 완전히 종료합니다.");
 	}
 	
+	public static void printInvalidPlayAgainInput() {
+		System.out.println("[ERROR] 1또는 2를 입력하셔야 합니다.");
+	}
+	
+	public static void printErrorInvalidDigit() {
+		System.out.println("[ERROR] 입력 값은 반드시 3자리여야 합니다.");
+	}
+	
+	public static void printErrorIncludeZero() {
+		System.out.println("[ERROR] 입력 값에 0이 포함될 수 없습니다.");
+	}
+
+	public static void printErrorOnlyNum() {
+		System.out.println("[ERROR] 입력 값은 숫자만 가능합니다.");
+	}
+	
+	public static void printErrorDuplNum() {
+		System.out.println("[ERROR] 중복되는 숫자를 입력할 수 없습니다.");
+	}	
+	
 	public static void printCheckAnswer(String checkResult) {
 		System.out.println(checkResult);
 	}
+	
+	
 
 	
 }

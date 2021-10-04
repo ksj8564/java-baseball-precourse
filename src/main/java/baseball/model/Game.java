@@ -17,7 +17,7 @@ public class Game {
 		return round;
 	}
 	
-	public void playAgain(String input) {		
+	public void selectPlayAgainOrEnd(String input) {			
 		if("2".equals(input)) {
 			isEnd = true;
 		}

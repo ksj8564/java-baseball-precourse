@@ -31,13 +31,5 @@ public class RoundResult {
 			result.append("낫싱");
 		}
 		return result.toString().trim();
-	}
-	
-	public boolean isEnd() {
-		if(strikeCnt == 3) {
-			return true;
-		}
-		return false;
-	}
-	
+	}	
 }
