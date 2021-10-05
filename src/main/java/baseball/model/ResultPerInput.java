@@ -1,11 +1,11 @@
 package baseball.model;
 
-public class RoundResult {
+public class ResultPerInput {
 	
 	private int strikeCnt = 0;
 	private int ballCnt = 0;
 			
-	public RoundResult(int strikeCnt, int ballCnt) {
+	public ResultPerInput(int strikeCnt, int ballCnt) {
 		this.strikeCnt = strikeCnt;
 		this.ballCnt = ballCnt;
 	}

@@ -3,18 +3,18 @@ package baseball.model;
 public class Round {
 
 	private RoundAnswerNum answer;
-	private RoundResult roundResult;	
+	private ResultPerInput resultPerInput;	
 
 	public Round() {
 		this.answer = new RoundAnswerNum();
 	}
 	
-	public RoundResult getRoundResult(String input) {
-		createRoundResult(input);
-		return roundResult;
+	public ResultPerInput getResultPerInput(String input) {
+		createResultPerInput(input);
+		return resultPerInput;
 	}
 
-	public void createRoundResult(String input) {
+	public void createResultPerInput(String input) {
 
 		int strikeCnt = 0;
 		int ballCnt = 0;
@@ -29,11 +29,11 @@ public class Round {
 				ballCnt++;
 			}
 		}
-		roundResult = new RoundResult(strikeCnt, ballCnt);
+		resultPerInput = new ResultPerInput(strikeCnt, ballCnt);
 	}
 
 	public boolean isEnd() {
-		if(roundResult.getStrikeCnt() == 3) {
+		if(resultPerInput.getStrikeCnt() == 3) {
 			return true;
 		}
 		return false;

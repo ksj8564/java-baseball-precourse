@@ -1,8 +1,8 @@
 package baseball.controller;
 
 import baseball.model.Game;
+import baseball.model.ResultPerInput;
 import baseball.model.Round;
-import baseball.model.RoundResult;
 import baseball.util.Util;
 import baseball.view.InputView;
 import baseball.view.OutputView;
@@ -20,13 +20,13 @@ public class GameController {
 	private static void playNewRound(Game game) {
 		game.createNewRound();
 		Round round = game.getRound();
-		RoundResult roundResult;
+		ResultPerInput resultPerInput;
 		do {
 			OutputView.answerNumInstruction();
 			String gameInput = InputView.getInput();
 			if(isValidGameInput(gameInput)) {
-				roundResult = round.getRoundResult(gameInput);
-				OutputView.printCheckAnswer(roundResult.getResultString());
+				resultPerInput = round.getResultPerInput(gameInput);
+				OutputView.printCheckAnswer(resultPerInput.getResultString());
 			}			
 		} while (!round.isEnd());
 		OutputView.printWinRound();
